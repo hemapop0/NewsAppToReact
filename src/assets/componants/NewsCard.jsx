@@ -30,15 +30,28 @@ function NewsCard({ article }) {
           {article.description || "No description available."}
         </p>
 
-        <button
-          type="button"
-          className={`favorite-btn ${isFavorite ? "is-favorite" : ""}`}
-          onClick={() => toggleFavorite(article)}
-          aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
-          title={isFavorite ? "Remove from favorites" : "Add to favorites"}
-        >
-          {isFavorite ? "♥" : "♡"}
-        </button>
+        <div className="news-card-actions">
+          <button
+            type="button"
+            className={`favorite-btn ${isFavorite ? "is-favorite" : ""}`}
+            onClick={() => toggleFavorite(article)}
+            aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+            title={isFavorite ? "Remove from favorites" : "Add to favorites"}
+          >
+            {isFavorite ? "♥" : "♡"}
+          </button>
+
+          {article.url && (
+            <a
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="read-more-btn"
+            >
+              Read More →
+            </a>
+          )}
+        </div>
       </div>
     </article>
   );

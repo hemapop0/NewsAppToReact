@@ -1,4 +1,3 @@
-
 const key = import.meta.env.VITE_CURRENTS_API_KEY;
 
 const BASE_URL = "https://api.currentsapi.services/v1";
@@ -6,16 +5,14 @@ const BASE_URL = "https://api.currentsapi.services/v1";
 async function fetchNews(url) {
   const response = await fetch(url, {
     headers: {
-      Authorization: key,
+      Authorization: `Bearer ${key}`,
     },
   });
 
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(
-      data.message || data.msg || "Failed to fetch news"
-    );
+    throw new Error(data.message || data.msg || "Failed to fetch news");
   }
 
   return data.news || [];
@@ -34,11 +31,7 @@ export async function searchNews(keyword) {
 }
 
 export async function getNewsByCategory(category) {
-  const supportedCategories = [
-    "health",
-    "sports",
-    "technology",
-  ];
+  const supportedCategories = ["health", "sports", "technology"];
 
   const params = new URLSearchParams();
 

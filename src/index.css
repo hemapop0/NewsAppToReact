@@ -71,6 +71,31 @@ span{
   flex-wrap: wrap;
 }
 
+.news-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.read-more-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #172554;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.read-more-btn:hover {
+
+  background-color: #38bdf8;
+  transform: translateY(-2px);
+}
+
 /* .nav-link {
   color: #e2e8f0;
   text-decoration: none;
