@@ -1,6 +1,7 @@
+
 name: Deploy NewsApp to GitHub Pages
 
-"on":
+on:
   push:
     branches:
       - main
