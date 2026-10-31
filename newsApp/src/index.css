@@ -1,0 +1,537 @@
+
+/* =========================
+   1. Global Styles
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f7fb;
+  color: #172554;
+  line-height: 1.6;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  min-height: 65vh;
+  margin: 35px auto;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+/* =========================
+   2. Navbar
+========================= */
+
+.navbar {
+  
+  width: 100%;
+  min-height: 75px;
+  padding: 15px 5%;
+  background-color: #172554;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+
+}
+
+span{
+  color: #38bdf8;
+}
+
+.navbar-logo {
+  font-size: 27px;
+  font-weight: bold;
+  
+}
+
+.navbar-logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+/* .nav-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #38bdf8;
+}
+
+.nav-link.active {
+  color: #38bdf8;
+} */
+ /* شكل الروابط العادي */
+.navbar-links 
+.nav-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+  
+}
+.navbar-search input{
+  margin-right: 10px;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+  outline: none;
+  color: #e2e8f0;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  cursor: text;
+  transition: all 0.3s ease;
+}
+.navbar-search input:hover{
+  border-color: #38bdf8;
+}
+
+.navbar-search button{
+  /* display: block;
+  margin: 0 auto; */
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid #00b3ff;
+  outline: none;
+  background-color: #38bdf8;
+  color: rgba(0, 0, 0, 0.479);
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-search input {
+  color: #64748b;
+}
+.navbar-search button:hover{
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.479);
+  border-color: #041c26;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* لما الماوس يقف على رابط واحد */
+/* اللون الطبيعي */
+/* اللون الطبيعي */
+.nav-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #38bdf8;
+}
+
+.nav-link.active {
+  color: #38bdf8;
+}
+
+
+
+/* =========================
+   3. Header
+========================= */
+
+.header {
+  width: 100%;
+  padding: 45px 20px;
+  margin-bottom: 35px;
+  text-align: center;
+
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  border-radius: 15px;
+}
+
+.header h1 {
+  color: #172554;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* =========================
+   4. Page Headings
+========================= */
+
+main > h1,
+main > h2 {
+  color: #172554;
+  margin-bottom: 20px;
+}
+
+main > h1 {
+  font-size: 30px;
+}
+
+main > h2 {
+  font-size: 25px;
+}
+
+/* =========================
+   5. News List
+========================= */
+
+.news-list,
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+  align-items: stretch;
+}
+
+/* =========================
+   6. News Card
+========================= */
+
+.news-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.news-card-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  background-color: #e2e8f0;
+}
+
+.news-card-content {
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.news-card-content h3 {
+  color: #172554;
+  font-size: 19px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.news-card-content p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   7. Buttons
+========================= */
+
+.news-card-content button {
+  margin-top: auto;
+  width: fit-content;
+
+  padding: 10px 16px;
+  border: none;
+  border-radius: 7px;
+
+  background-color: #2563eb;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.news-card-content button:hover {
+  background-color: #1d4ed8;
+}
+
+/* =========================
+   8. Search Page
+========================= */
+
+.search-page {
+  min-height: 65vh;
+}
+
+.search-page h2 {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+/* =========================
+   9. Search Bar
+========================= */
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.search-form input {
+  width: 100%;
+  max-width: 450px;
+  padding: 12px 15px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  background-color: white;
+}
+
+.search-form input:focus {
+  border-color: #2563eb;
+}
+
+.search-form button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+
+  background-color: #2563eb;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-form button:hover {
+  background-color: #1d4ed8;
+}
+
+/* =========================
+   10. Empty & Error Messages
+========================= */
+
+.empty-message {
+  width: 100%;
+  padding: 25px;
+  margin: 25px 0;
+
+  text-align: center;
+  color: #64748b;
+
+  background-color: white;
+  border-radius: 10px;
+}
+
+.error-message {
+  padding: 15px;
+  margin: 20px 0;
+  color: #dc2626;
+  background-color: #fee2e2;
+  border-radius: 8px;
+}
+
+/* =========================
+   11. Article Details
+========================= */
+
+.article-details {
+  max-width: 900px;
+}
+
+.article-details img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.article-details span {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.article-details h1 {
+  margin: 15px 0;
+  color: #172554;
+  font-size: 30px;
+}
+
+.article-details p {
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.article-details a {
+  display: inline-block;
+  padding: 11px 20px;
+
+  background-color: #2563eb;
+  color: white;
+
+  text-decoration: none;
+  border-radius: 7px;
+}
+
+.article-details a:hover {
+  background-color: #1d4ed8;
+}
+
+/* =========================
+   12. Footer
+========================= */
+
+.footer {
+  width: 100%;
+  padding: 22px 15px;
+  margin-top: 45px;
+
+  background-color: #172554;
+  color: white;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+/* =========================
+   13. Tablet
+========================= */
+
+@media (max-width: 900px) {
+  .news-list,
+  .news-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+}
+
+/* =========================
+   14. Mobile
+========================= */
+
+@media (max-width: 600px) {
+  main {
+    width: 94%;
+    margin: 20px auto;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 18px 12px;
+  }
+
+  .navbar-links {
+    gap: 12px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .header {
+    padding: 35px 15px;
+  }
+
+  .header h1 {
+    font-size: 26px;
+  }
+
+  .news-list,
+  .news-container {
+    grid-template-columns: 1fr;
+  }
+
+  .news-card-image {
+    height: 220px;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-form input,
+  .search-form button {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .article-details h1 {
+    font-size: 24px;
+  }
+}
+
+
+
+.favorite-btn {
+  align-self: flex-end;
+  margin-top: auto;
+  background: transparent !important;
+  border: none;
+  color: #94a3b8 !important;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.favorite-btn:hover {
+  color: #e11d48 !important;
+  transform: scale(1.15);
+}
+
+.favorite-btn.is-favorite {
+  color: #e11d48 !important;
+}
