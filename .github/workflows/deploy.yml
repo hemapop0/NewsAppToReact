@@ -1,9 +1,9 @@
-cat > .github/workflows/deploy.yml <<'EOF'
 name: Deploy NewsApp to GitHub Pages
 
-on:
+"on":
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -52,4 +52,3 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
-EOF
